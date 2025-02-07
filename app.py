@@ -19,11 +19,11 @@ SIZES = {
 
 def process_image(image, size_name):
     target_width, target_height = SIZES[size_name]
-    
+
     # 计算裁剪尺寸
     original_ratio = image.width / image.height
     target_ratio = target_width / target_height
-    
+
     if original_ratio > target_ratio:
         # 图片太宽，需要裁剪宽度
         new_width = int(image.height * target_ratio)
@@ -34,7 +34,7 @@ def process_image(image, size_name):
         new_height = int(image.width / target_ratio)
         top = (image.height - new_height) // 2
         image = image.crop((0, top, image.width, top + new_height))
-    
+
     # 调整到目标尺寸
     return image.resize((target_width, target_height), Image.Resampling.LANCZOS)
 
@@ -51,29 +51,29 @@ def process():
     try:
         if 'image' not in request.files:
             return jsonify({'error': '没有上传图片'}), 400
-            
+
         image_file = request.files['image']
         size_name = request.form.get('size')
-        
+
         if size_name not in SIZES:
             return jsonify({'error': '无效的尺寸选择'}), 400
-            
+
         # 处理图片
         image = Image.open(image_file)
         processed_image = process_image(image, size_name)
-        
+
         # 转换为base64
         buffered = io.BytesIO()
         processed_image.save(buffered, format="JPEG", quality=95)
         img_str = base64.b64encode(buffered.getvalue()).decode()
-        
+
         return jsonify({
             'image': f'data:image/jpeg;base64,{img_str}',
             'size': size_name
         })
-        
+
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000) 
+    app.run(host='0.0.0.0', port=5000)
