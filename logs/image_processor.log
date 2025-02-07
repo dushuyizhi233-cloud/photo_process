@@ -166,3 +166,11 @@
 2025-02-07 15:11:20,760 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-02-07 15:11:20,761 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
 2025-02-07 15:11:20,953 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:20] "GET /api/sizes HTTP/1.1" 200 -
+2025-02-07 15:11:46,711 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:46] "[36mGET / HTTP/1.1[0m" 304 -
+2025-02-07 15:11:46,728 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:46] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-07 15:11:46,728 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-02-07 15:11:46,946 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:46] "GET /api/sizes HTTP/1.1" 200 -
+2025-02-07 15:11:53,314 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:53] "[36mGET / HTTP/1.1[0m" 304 -
+2025-02-07 15:11:53,328 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-07 15:11:53,330 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-02-07 15:11:53,536 - werkzeug - INFO - 172.21.0.1 - - [07/Feb/2025 15:11:53] "GET /api/sizes HTTP/1.1" 200 -
